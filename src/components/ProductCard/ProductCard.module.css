@@ -1,0 +1,69 @@
+.Container {
+  width: 20rem;
+  height: 27rem;
+}
+
+.Container:hover > .Card {
+  transform: rotateY(180deg);
+}
+
+.Card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1500ms;
+  transform-style: preserve-3d;
+}
+
+.Front,
+.Back {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  border-radius: 1rem;
+  backface-visibility: hidden;
+}
+
+.Front {
+  background-color: white;
+  transition: transform 1.5s;
+}
+
+.Back {
+  transform: rotateY(180deg);
+  background-color: var(--color-blue);
+  padding: 1rem;
+  color: white;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.Image {
+  aspect-ratio: 1/1;
+  width: 100%;
+  object-fit: contain;
+  background-color: white;
+  padding: 1rem;
+}
+
+.Title {
+  padding-inline: 1rem;
+  color: var(--color-blue);
+  margin-block-end: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.Price {
+  padding-inline: 1rem;
+  color: var(--color-green);
+}
+
+.SubTitle {
+  color: var(--color-yellow);
+}

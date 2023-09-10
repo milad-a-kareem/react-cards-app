@@ -1,0 +1,28 @@
+.Indicator {
+  border: 0.35rem solid var(--color-green);
+  border-radius: 0.5rem;
+  animation: rotation 1.5s infinite linear;
+
+  width: 3rem;
+  height: 3rem;
+}
+
+.Text {
+  color: var(--color-green);
+}
+
+.Container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
