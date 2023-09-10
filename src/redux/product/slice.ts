@@ -2,7 +2,13 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 import products from "../../api/products";
 import { TProduct, TProductState } from "./types";
-import { ERROR, GET_PRODUCTS_ASYNC_THUNK_NAME, IDLE, PENDING, PRODUCT } from "../../utils/constants";
+import {
+  ERROR,
+  GET_PRODUCTS_ASYNC_THUNK_NAME,
+  IDLE,
+  PENDING,
+  PRODUCT,
+} from "../../utils/constants";
 
 export const getProducts = createAsyncThunk(
   GET_PRODUCTS_ASYNC_THUNK_NAME,
